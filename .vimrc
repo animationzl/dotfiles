@@ -29,7 +29,8 @@ set foldmethod=indent
 set foldlevelstart=99                                                           
 set scrolloff=999                                                               
 set colorcolumn=80                                                              
-                                                                                
+
+set ttimeoutlen=0
                                                                                 
 " key map                                                                       
 nnoremap <c-h> <c-w>h                                                           
