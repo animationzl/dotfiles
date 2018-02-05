@@ -1,0 +1,10 @@
+mileszs/ack.vim
+cohama/lexima.vim
+itchyny/lightline.vim
+fholgado/minibufexpl.vim
+scrooloose/nerdtree
+NLKNguyen/papercolor-theme
+majutsushi/tagbar
+easymotion/vim-easymotion
+itchyny/vim-gitbranch
+airblade/vim-rooter
