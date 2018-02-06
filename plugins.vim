@@ -8,3 +8,4 @@ majutsushi/tagbar
 easymotion/vim-easymotion
 itchyny/vim-gitbranch
 airblade/vim-rooter
+ajh17/VimCompletesMe
