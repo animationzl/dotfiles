@@ -11,6 +11,7 @@ done < apt-packages
 if [[ ! -e ~/.zshrc ]]; then
     git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
     cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+    sed -i '/^ZSH_THEME/c ZSH_THEME="bira"' ~/.zshrc
     { echo; cat shell-aliases; } >> ~/.zshrc
     chsh -s $(which zsh)
 fi
