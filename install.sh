@@ -9,7 +9,8 @@ do
 done < apt-packages
 
 if [[ ! -e ~/.zshrc ]]; then
-    sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+    git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+    cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
     { echo; cat shell-aliases; } >> ~/.zshrc
     chsh -s $(which zsh)
 fi
