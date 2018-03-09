@@ -19,9 +19,15 @@ set nocompatible
 set timeoutlen=1000
 set ttimeoutlen=0
 
-set t_Co=256
-set background=light
-colorscheme PaperColor
+if (empty($TMUX))
+  if (has("nvim"))
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+  if (has("termguicolors"))
+    set termguicolors
+  endif
+endif
+colorscheme onedark
 
 set encoding=utf-8
 set fileencoding=utf-8
@@ -95,7 +101,7 @@ autocmd BufNewFile,BufReadPost *.py set colorcolumn=80
 " itchyny/lightline.vim
 """""""""""""""""""""""
 let g:lightline = {
-      \ 'colorscheme': 'PaperColor',
+      \ 'colorscheme': 'onedark',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'filename', 'modified' ] ]
