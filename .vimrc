@@ -65,6 +65,7 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 nnoremap <space> za
 nnoremap = <c-w>=
+nnoremap <f3> :set paste!<cr>
 
 " leader map
 """"""""""""
