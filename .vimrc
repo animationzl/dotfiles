@@ -35,7 +35,6 @@ set fileencodings=ucs-bom,utf-8,gbk,cp936,gb2312,big5,euc-jp,euc-kr,latin1
 let &termencoding=&encoding
 
 set laststatus=2
-set number
 set ruler
 set showcmd
 set cursorline
