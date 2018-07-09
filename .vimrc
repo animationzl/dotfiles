@@ -148,3 +148,7 @@ nmap f <Plug>(easymotion-sl)
 nmap s <Plug>(easymotion-s2)
 vmap f <Plug>(easymotion-sl)
 vmap s <Plug>(easymotion-s2)
+
+" junegunn/vim-easy-align
+"""""""""""""""""""""""""
+vmap <Enter> <Plug>(EasyAlign)
