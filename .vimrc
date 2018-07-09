@@ -3,7 +3,7 @@
 """"""""""""""""
 
 " tpope/vim-pathogen
-""""""""""""""
+""""""""""""""""""""
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
@@ -146,3 +146,5 @@ let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_smartcase = 1
 nmap f <Plug>(easymotion-sl)
 nmap s <Plug>(easymotion-s2)
+vmap f <Plug>(easymotion-sl)
+vmap s <Plug>(easymotion-s2)
