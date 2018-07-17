@@ -1,0 +1,4 @@
+export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
+
+alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
+alias nc='rlwrap nc'

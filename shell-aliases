@@ -1,4 +1,0 @@
-export EDITOR=$(which vim)
-
-alias nc='rlwrap nc'
-alias tmux='TERM=screen-256color-bce tmux'
