@@ -56,6 +56,12 @@ set foldmethod=indent
 set foldlevelstart=99
 set scrolloff=999
 
+" GUI
+set guifont=Monaco:h12
+set guioptions-=r
+set guioptions-=L
+set guioptions-=b
+
 " key map
 """""""""
 nnoremap <c-h> <c-w>h
@@ -70,6 +76,8 @@ vnoremap gy "*y
 " leader map
 """"""""""""
 let mapleader = ","
+
+vnoremap <leader>j :'<,'>!python -m json.tool<cr>
 
 nnoremap <silent> <leader><space> :call <sid>stripTrailingWhitespace()<cr>
 function! <sid>stripTrailingWhitespace()
