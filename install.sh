@@ -3,7 +3,7 @@
 cd $(dirname "$0")
 
 [[ ! -e ~/.vimrc ]] && cp .vimrc ~/.vimrc
-[[ ! -e ~/.tmux.conf ]] && cp .vimrc ~/.tmux.conf
+[[ ! -e ~/.tmux.conf ]] && cp .tmux.conf ~/.tmux.conf
 
 mkdir -p ~/.vim/autoload ~/.vim/bundle
 
