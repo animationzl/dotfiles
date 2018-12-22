@@ -1,5 +1,5 @@
 """"""""""""""""
-" plugin manager
+" Plugin manager
 """"""""""""""""
 
 " tpope/vim-pathogen
@@ -8,11 +8,12 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+
 """""""""""""""""
-" native settings
+" Native settings
 """""""""""""""""
 
-" basic
+" Basic
 """""""
 set nocompatible
 
@@ -62,7 +63,7 @@ set guioptions-=r
 set guioptions-=L
 set guioptions-=b
 
-" key map
+" Key map
 """""""""
 nnoremap <c-h> <c-w>h
 nnoremap <c-j> <c-w>j
@@ -72,8 +73,9 @@ nnoremap <space> za
 nnoremap = <c-w>=
 nnoremap <f3> :set paste!<cr>
 vnoremap gy "*y
+nnoremap q :q<cr>
 
-" leader map
+" Leader map
 """"""""""""
 let mapleader = ","
 
@@ -92,20 +94,18 @@ function! <sid>stripTrailingWhitespace()
     call cursor(l, c)
 endfunction
 
-" autocmd
+" Autocmd
 """""""""
-" highlight trailing whitespace
+" Highlight trailing whitespace
 highlight TrailingWhitespace ctermbg=red guibg=red
 match TrailingWhitespace /\s\+$/
 autocmd BufWinEnter * match TrailingWhitespace /\s\+$/
 autocmd InsertEnter * match TrailingWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match TrailingWhitespace /\s\+$/
 
-" column guideline
-autocmd BufNewFile,BufReadPost *.py set colorcolumn=80
 
 """"""""""""""""
-" plugins config
+" Plugins config
 """"""""""""""""
 
 " itchyny/lightline.vim
@@ -161,4 +161,4 @@ vmap s <Plug>(easymotion-s2)
 
 " junegunn/vim-easy-align
 """""""""""""""""""""""""
-vmap <Enter> <Plug>(EasyAlign)
+vmap <cr> <Plug>(EasyAlign)
