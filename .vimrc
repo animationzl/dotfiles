@@ -73,7 +73,6 @@ nnoremap <space> za
 nnoremap = <c-w>=
 nnoremap <f3> :set paste!<cr>
 vnoremap gy "*y
-nnoremap q :q<cr>
 
 " Leader map
 """"""""""""
