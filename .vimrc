@@ -102,6 +102,9 @@ autocmd BufWinEnter * match TrailingWhitespace /\s\+$/
 autocmd InsertEnter * match TrailingWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match TrailingWhitespace /\s\+$/
 
+" Autosave
+autocmd BufLeave,FocusLost * silent! wall
+
 
 """"""""""""""""
 " Plugins config
