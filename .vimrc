@@ -65,22 +65,23 @@ set guioptions-=b
 
 " Key map
 """""""""
-nnoremap <c-h> <c-w>h
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-l> <c-w>l
-nnoremap <space> za
-nnoremap = <c-w>=
-nnoremap <f3> :set paste!<cr>
-vnoremap gy "*y
+nmap <c-h> <c-w>h
+nmap <c-j> <c-w>j
+nmap <c-k> <c-w>k
+nmap <c-l> <c-w>l
+nmap <space> za
+nmap = <c-w>=
+nmap <f4> :set paste!<cr>
+vmap gy "*y
+nmap zz :wq<cr>
 
 " Leader map
 """"""""""""
 let mapleader = ","
 
-vnoremap <leader>j :'<,'>!python -m json.tool<cr>
+vmap <leader>j :'<,'>!python -m json.tool<cr>
 
-nnoremap <silent> <leader><space> :call <sid>stripTrailingWhitespace()<cr>
+nmap <silent> <leader><space> :call <sid>stripTrailingWhitespace()<cr>
 function! <sid>stripTrailingWhitespace()
     " Preparation: save last search, and cursor position.
     let _s=@/
@@ -125,17 +126,12 @@ let g:lightline = {
 
 " scrooloose/nerdtree
 """""""""""""""""""""
-map <f1> :NERDTreeToggle<cr>
-map <leader>f :NERDTreeFind<cr>
+nmap <f1> :NERDTreeToggle<cr>
+nmap <leader>f :NERDTreeFind<cr>
 
 " majutsushi/tagbar
 """""""""""""""""""
-nmap <f2> :TagbarToggle<cr>
-
-" fholgado/minibufexpl.vim
-""""""""""""""""""""""""""
-let g:miniBufExplBuffersNeeded = 1
-let g:miniBufExplShowBufNumbers = 0
+nmap <f3> :TagbarToggle<cr>
 
 " mileszs/ack.vim
 """""""""""""""""
@@ -143,8 +139,8 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
-cnoreabbrev ag Ack!
-cnoreabbrev agf AckFile!
+cabbrev ag Ack!
+cabbrev agf AckFile!
 vmap * "ay:Ack! '<c-r>a'<cr>
 
 " airblade/vim-rooter
@@ -164,3 +160,7 @@ vmap s <Plug>(easymotion-s2)
 " junegunn/vim-easy-align
 """""""""""""""""""""""""
 vmap <cr> <Plug>(EasyAlign)
+
+" troydm/easybuffer.vim
+"""""""""""""""""""""""
+nmap <f2> :EasyBuffer<cr>
