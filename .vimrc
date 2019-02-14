@@ -72,8 +72,6 @@ nmap <c-l> <c-w>l
 nmap <space> za
 nmap = <c-w>=
 nmap <f4> :set paste!<cr>
-vmap gy "*y
-nmap zz :wq<cr>
 
 " Leader map
 """"""""""""
