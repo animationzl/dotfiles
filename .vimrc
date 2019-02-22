@@ -78,7 +78,7 @@ nmap <f4> :set paste!<cr>
 """"""""""""
 let mapleader = ","
 
-vmap <leader>j :'<,'>!python -m json.tool<cr>
+vmap <leader>j :'<,'>!python3 -m json.tool<cr>
 
 nmap <silent> <leader><space> :call <sid>stripTrailingWhitespace()<cr>
 function! <sid>stripTrailingWhitespace()
