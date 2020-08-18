@@ -88,7 +88,6 @@ function! <sid>stripTrailingWhitespace()
     call cursor(l, c)
 endfunction
 
-
 " Autocmd
 """""""""
 " Highlight trailing whitespace
