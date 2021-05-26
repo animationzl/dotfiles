@@ -1,2 +1,3 @@
 # config
-Personal config for setup a linux env
+
+personal config

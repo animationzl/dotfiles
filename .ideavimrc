@@ -1,0 +1,2 @@
+" no beep or flash
+set vb t_vb=
