@@ -8,7 +8,6 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-
 """""""""""""""""
 " Native settings
 """""""""""""""""
@@ -99,7 +98,6 @@ autocmd InsertLeave * match TrailingWhitespace /\s\+$/
 
 " Autosave
 autocmd BufLeave,FocusLost * silent! wall
-
 
 """"""""""""""""
 " Plugins config
