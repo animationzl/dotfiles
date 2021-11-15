@@ -1,4 +1,7 @@
-export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
+# Keep spaces after TAB completion
+ZLE_REMOVE_SUFFIX_CHARS=''
 
-alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
+alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias nc='rlwrap nc'
+
+export EDITOR='/Applications/MacVim.app/Contents/MacOS/Vim'
