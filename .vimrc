@@ -63,6 +63,9 @@ set guioptions-=r
 set guioptions-=L
 set guioptions-=b
 
+" When no beep or flash is wanted
+set vb t_vb=
+
 " Key map
 """""""""
 nmap <c-h> <c-w>h
