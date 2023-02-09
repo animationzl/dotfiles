@@ -1,22 +1,23 @@
 #!/bin/bash
 
+set -e
+
 cd $(dirname "$0")
 
-[[ ! -e ~/.vimrc ]] && cp .vimrc ~/.vimrc
-[[ ! -e ~/.tmux.conf ]] && cp .tmux.conf ~/.tmux.conf
+cp .ideavimrc .tmux.conf .vimrc .zshrc ~/
 
-mkdir -p ~/.vim/autoload ~/.vim/bundle
+# config vim
+############
 
-# Install tpope/vim-pathogen
-if [[ ! -e ~/.vim/autoload/pathogen.vim ]]; then
-    curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-fi
+VIM_CONF_DIR=~/.vim
+rm -rf "$VIM_CONF_DIR"
 
-# Install vim plugins
+# install plugin manager
+mkdir -p "$VIM_CONF_DIR/autoload" "$VIM_CONF_DIR/bundle"
+curl -LSso "$VIM_CONF_DIR/autoload/pathogen.vim" https://tpo.pe/pathogen.vim
+
+# install plugins
 while read repo
 do
-    short_name=${repo##*/}
-    if [[ ! -d ~/.vim/bundle/"$short_name" ]]; then
-        git clone https://github.com/"$repo" ~/.vim/bundle/"$short_name"
-    fi
-done < vim-plugins
+    git -C "$VIM_CONF_DIR/bundle" clone "$repo"
+done <vim-plugins
