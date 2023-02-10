@@ -57,7 +57,6 @@ let &fillchars ..= ',eob: '
 
 set nobackup
 set noswapfile
-set undofile
 
 set autoindent
 set expandtab
