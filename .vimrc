@@ -52,6 +52,8 @@ set ruler
 set showcmd
 set cursorline
 set noshowmode
+" disable `~` on nonexistent lines
+let &fillchars ..= ',eob: '
 
 set nobackup
 set noswapfile
