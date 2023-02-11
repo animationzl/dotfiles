@@ -10,9 +10,6 @@ export ZSH=$HOME/.oh-my-zsh
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="bira"
 
-# Keep space after TAB completion
-ZLE_REMOVE_SUFFIX_CHARS=''
-
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -104,3 +101,6 @@ source $ZSH/oh-my-zsh.sh
 alias aria2c='aria2c -s 16 -x 16 -k 1M'
 
 export EDITOR=vim
+
+# keep space after tab completion
+ZLE_REMOVE_SUFFIX_CHARS=''
