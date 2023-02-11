@@ -101,7 +101,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias aria2c='aria2c -s 16 -x 16 -k 1M'
 
-export EDITOR='/Applications/MacVim.app/Contents/MacOS/Vim'
+export EDITOR=vim
