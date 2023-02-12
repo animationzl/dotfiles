@@ -1,11 +1,13 @@
 " options
 """""""""
 
+" encoding
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,gbk,cp936,gb2312,big5,euc-jp,euc-kr,latin1
 let &termencoding=&encoding
 
+" appearance
 set laststatus=2
 set number
 set ruler
@@ -13,22 +15,32 @@ set showcmd
 set cursorline
 set noshowmode
 
+" no backup & swap file
 set nobackup
 set noswapfile
 
+" indent
 set autoindent
 set expandtab
 set tabstop=4
 set shiftwidth=4
 
+" search
 set incsearch
 set ignorecase
 set smartcase
 set hlsearch
 
+" fold
 set foldmethod=indent
 set foldlevelstart=99
+
+" make cursor line always be in the middle of the window
 set scrolloff=999
+
+" focus on the new window when split
+set splitbelow
+set splitright
 
 " eliminate keyboard delay
 set timeoutlen=500
@@ -43,22 +55,25 @@ let &fillchars ..= ',eob: '
 " change default register to system clipboard
 set clipboard=unnamed
 
-" gui
-set guifont=Monaco:h14
-set guioptions-=r
-set guioptions-=L
-set guioptions-=b
-
 " key maps
 """"""""""
 
 let mapleader = ","
 
+" switch window
 nmap <c-h> <c-w>h
 nmap <c-j> <c-w>j
 nmap <c-k> <c-w>k
 nmap <c-l> <c-w>l
+
+" split window
+nmap <leader>s :split<cr>
+nmap <leader>v :vsplit<cr>
+
+" fold toggle
 nmap <space> za
+
+" make all windows the same height & width
 nmap = <c-w>=
 
 " strip trailing whitespace
@@ -74,19 +89,6 @@ function! <sid>stripTrailingWhitespace()
     let @/=_s
     call cursor(l, c)
 endfunction
-
-" autocmd
-"""""""""
-
-" highlight trailing whitespace
-highlight TrailingWhitespace ctermbg=red guibg=red
-match TrailingWhitespace /\s\+$/
-autocmd BufWinEnter * match TrailingWhitespace /\s\+$/
-autocmd InsertEnter * match TrailingWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match TrailingWhitespace /\s\+$/
-
-" autosave
-autocmd BufLeave,FocusLost * silent! wall
 
 " plugins
 """""""""
@@ -158,6 +160,11 @@ let g:lightline = {
 
 " nerdtree
 nmap <f1> :NERDTreeToggle<cr>
+nmap <leader>f :NERDTreeFind<cr>
+" https://github.com/preservim/nerdtree/issues/1321
+" after using <m> bottom panel stays bigger and wont disappear
+" workaround
+let g:NERDTreeMinimalMenu=1
 
 " easybuffer.vim
 nmap <f2> :EasyBuffer<cr>
@@ -172,3 +179,16 @@ vmap s <Plug>(easymotion-s2)
 
 " vim-easy-align
 vmap <cr> <Plug>(EasyAlign)
+
+" autocmd
+"""""""""
+
+" highlight trailing whitespace
+highlight TrailingWhitespace ctermbg=red guibg=red
+match TrailingWhitespace /\s\+$/
+autocmd BufWinEnter * match TrailingWhitespace /\s\+$/
+autocmd InsertEnter * match TrailingWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match TrailingWhitespace /\s\+$/
+
+" autosave
+autocmd BufLeave * silent! wa
