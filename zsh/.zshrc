@@ -98,9 +98,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias aria2c='aria2c -s 16 -x 16 -k 1M'
-
-export EDITOR=vim
-
 # keep space after tab completion
 ZLE_REMOVE_SUFFIX_CHARS=''
+
+export EDITOR=vim
+export FZF_DEFAULT_OPTS='--height 40% --layout reverse'
+
+alias aria2c='aria2c -s 16 -x 16 -k 1M'
