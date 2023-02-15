@@ -58,7 +58,11 @@ set clipboard=unnamed
 " key maps
 """"""""""
 
-let mapleader = ","
+let mapleader = " "
+
+" quick save & quit
+nmap <leader>w :w<cr>
+nmap <leader>q :q<cr>
 
 " switch window
 nmap <c-h> <c-w>h
@@ -67,14 +71,14 @@ nmap <c-k> <c-w>k
 nmap <c-l> <c-w>l
 
 " split window
-nmap <leader>s :split<cr>
-nmap <leader>v :vsplit<cr>
-
-" fold toggle
-nmap <space> za
+nmap \ :split<cr>
+nmap \| :vsplit<cr>
 
 " make all windows the same height & width
 nmap = <c-w>=
+
+" fold toggle
+nmap <leader>z za
 
 " strip trailing whitespace
 nmap <leader><space> :call <sid>stripTrailingWhitespace()<cr>
@@ -159,7 +163,7 @@ let g:lightline = {
       \ }
 
 " nerdtree
-nmap <f1> :NERDTreeToggle<cr>
+nmap <leader>e :NERDTreeToggle<cr>
 nmap <leader>f :NERDTreeFind<cr>
 " https://github.com/preservim/nerdtree/issues/1321
 " after using <m> bottom panel stays bigger and wont disappear
@@ -167,7 +171,7 @@ nmap <leader>f :NERDTreeFind<cr>
 let g:NERDTreeMinimalMenu=1
 
 " easybuffer.vim
-nmap <f2> :EasyBuffer<cr>
+nmap <leader>b :EasyBuffer<cr>
 
 " vim-easymotion
 let g:EasyMotion_do_mapping = 0
