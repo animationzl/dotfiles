@@ -35,8 +35,8 @@ set hlsearch
 set foldmethod=indent
 set foldlevelstart=99
 
-" make cursor line always be in the middle of the window
-set scrolloff=999
+" number of lines to keep above and below the cursor
+set scrolloff=8
 
 " focus on the new window when split
 set splitbelow
