@@ -1,23 +1,19 @@
 " options
 """""""""
 
+" eliminate keyboard delay
+set timeoutlen=500
+set ttimeoutlen=0
+
+" no backup & swap file
+set nobackup
+set noswapfile
+
 " encoding
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,gbk,cp936,gb2312,big5,euc-jp,euc-kr,latin1
 let &termencoding=&encoding
-
-" appearance
-set laststatus=2
-set number
-set ruler
-set showcmd
-set cursorline
-set noshowmode
-
-" no backup & swap file
-set nobackup
-set noswapfile
 
 " indent
 set autoindent
@@ -35,25 +31,21 @@ set hlsearch
 set foldmethod=indent
 set foldlevelstart=99
 
-" number of lines to keep above and below the cursor
-set scrolloff=8
+" appearance
+set laststatus=2
+set number
+set ruler
+set showcmd
+set cursorline
+set noshowmode
+set scrolloff=8 " number of lines to keep above and below the cursor
+set splitbelow " focus on the new window when split
+set splitright " focus on the new window when split
+let &fillchars ..= ',eob: ' " disable `~` on nonexistent lines
 
-" focus on the new window when split
-set splitbelow
-set splitright
-
-" eliminate keyboard delay
-set timeoutlen=500
-set ttimeoutlen=0
-
-" no beep or flash
-set vb t_vb=
-
-" disable `~` on nonexistent lines
-let &fillchars ..= ',eob: '
-
-" change default register to system clipboard
-set clipboard=unnamed
+" others
+set clipboard=unnamed " change default register to system clipboard
+set vb t_vb= " no beep or flash
 
 " key maps
 """"""""""
