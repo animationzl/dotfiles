@@ -74,12 +74,6 @@ nmap <c-l> <c-w>l
 nmap \ :split<cr>
 nmap \| :vsplit<cr>
 
-" make all windows the same height & width
-nmap = <c-w>=
-
-" fold toggle
-nmap <leader>z za
-
 " strip trailing whitespace
 nmap <leader><space> :call <sid>stripTrailingWhitespace()<cr>
 function! <sid>stripTrailingWhitespace()
