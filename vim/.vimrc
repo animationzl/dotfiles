@@ -78,7 +78,7 @@ endif
 
 " manage plugins
 call plug#begin()
-Plug 'ajh17/VimCompletesMe'
+Plug 'vim-scripts/VimCompletesMe'
 Plug 'cohama/lexima.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'itchyny/lightline.vim'
