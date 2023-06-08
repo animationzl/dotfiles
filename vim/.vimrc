@@ -66,6 +66,20 @@ nmap <c-l> <c-w>l
 nmap \ :split<cr>
 nmap \| :vsplit<cr>
 
+" strip trailing whitespace
+nmap <leader>s :call <sid>stripTrailingWhitespace()<cr>
+function! <sid>stripTrailingWhitespace()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+
 " plugins
 """""""""
 
@@ -155,3 +169,16 @@ vmap s <Plug>(easymotion-s2)
 
 " vim-easy-align
 vmap <cr> <Plug>(EasyAlign)
+
+" autocmd
+"""""""""
+
+" autosave
+autocmd BufLeave * silent! wa
+
+" highlight trailing whitespace
+highlight TrailingWhitespace ctermbg=red guibg=red
+match TrailingWhitespace /\s\+$/
+autocmd BufWinEnter * match TrailingWhitespace /\s\+$/
+autocmd InsertEnter * match TrailingWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match TrailingWhitespace /\s\+$/
