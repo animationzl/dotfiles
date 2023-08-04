@@ -101,9 +101,10 @@ Plug 'joshdick/onedark.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'preservim/nerdtree'
 Plug 'troydm/easybuffer.vim'
+Plug 'voldikss/vim-floaterm'
 call plug#end()
 
-" onedark.vim
+" Plug 'joshdick/onedark.vim'
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 "If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
 "(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
@@ -136,7 +137,7 @@ endif
 syntax on
 colorscheme onedark
 
-" lightline.vim
+" Plug 'itchyny/lightline.vim'
 let g:lightline = {
       \ 'colorscheme': 'onedark',
       \ 'active': {
@@ -148,7 +149,7 @@ let g:lightline = {
       \ },
       \ }
 
-" nerdtree
+" Plug 'preservim/nerdtree'
 nmap <leader>e :NERDTreeToggle<cr>
 nmap <leader>f :NERDTreeFind<cr>
 " https://github.com/preservim/nerdtree/issues/1321
@@ -156,10 +157,10 @@ nmap <leader>f :NERDTreeFind<cr>
 " workaround
 let g:NERDTreeMinimalMenu=1
 
-" easybuffer.vim
+" Plug 'troydm/easybuffer.vim'
 nmap <leader>b :EasyBuffer<cr>
 
-" vim-easymotion
+" Plug 'easymotion/vim-easymotion'
 let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_smartcase = 1
 nmap f <Plug>(easymotion-sl)
@@ -167,8 +168,14 @@ nmap s <Plug>(easymotion-s2)
 vmap f <Plug>(easymotion-sl)
 vmap s <Plug>(easymotion-s2)
 
-" vim-easy-align
+" Plug 'junegunn/vim-easy-align'
 vmap <cr> <Plug>(EasyAlign)
+
+" Plug 'voldikss/vim-floaterm'
+let g:floaterm_keymap_toggle = '<F7>'
+let g:floaterm_keymap_kill = '<F8>'
+let g:floaterm_width = 0.8
+let g:floaterm_height = 0.8
 
 " autocmd
 """""""""
