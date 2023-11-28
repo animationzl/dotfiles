@@ -26,6 +26,7 @@ set incsearch
 set ignorecase
 set smartcase
 set hlsearch
+set shortmess-=S " show search count message when searching
 
 " fold
 set foldmethod=indent
