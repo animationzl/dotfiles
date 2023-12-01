@@ -39,7 +39,6 @@ set ruler
 set showcmd
 set cursorline
 set noshowmode
-set scrolloff=8 " number of lines to keep above and below the cursor
 set splitbelow " focus on the new window when split
 set splitright " focus on the new window when split
 let &fillchars ..= ',eob: ' " disable `~` on nonexistent lines
