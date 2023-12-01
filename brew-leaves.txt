@@ -1,10 +1,7 @@
 aria2
 fzf
 go
-neovim
-node
 python
-ripgrep
 stow
 tmux
 tree
