@@ -107,8 +107,5 @@ export EDITOR=vim
 # fzf default options
 export FZF_DEFAULT_OPTS='--height 40% --layout reverse'
 
-# brew downloading error workaround
-export HOMEBREW_NO_INSTALL_FROM_API=1
-
 # aria2c alias
 alias aria2c='aria2c -s 16 -x 16 -k 1M'
