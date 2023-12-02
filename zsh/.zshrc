@@ -104,8 +104,5 @@ ZLE_REMOVE_SUFFIX_CHARS=''
 # default editor
 export EDITOR=vim
 
-# fzf default options
-export FZF_DEFAULT_OPTS='--height 40% --layout reverse'
-
 # aria2c alias
 alias aria2c='aria2c -s 16 -x 16 -k 1M'
