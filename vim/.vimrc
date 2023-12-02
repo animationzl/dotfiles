@@ -172,10 +172,11 @@ vmap s <Plug>(easymotion-s2)
 vmap <cr> <Plug>(EasyAlign)
 
 " Plug 'voldikss/vim-floaterm'
-let g:floaterm_keymap_toggle = '<F7>'
-let g:floaterm_keymap_kill = '<F8>'
 let g:floaterm_width = 0.8
 let g:floaterm_height = 0.8
+let g:floaterm_opener = 'edit'
+let g:floaterm_keymap_toggle = '<f7>'
+nmap <leader>o :FloatermNew fzf<cr>
 
 " autocmd
 """""""""
