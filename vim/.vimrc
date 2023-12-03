@@ -150,8 +150,7 @@ let g:lightline = {
       \ }
 
 " Plug 'preservim/nerdtree'
-nmap <leader>e :NERDTreeToggle<cr>
-nmap <leader>f :NERDTreeFind<cr>
+nmap <leader>e :NERDTreeFind<cr>
 " https://github.com/preservim/nerdtree/issues/1321
 " after using <m> bottom panel stays bigger and wont disappear
 " workaround
