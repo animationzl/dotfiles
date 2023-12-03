@@ -92,16 +92,17 @@ endif
 
 " manage plugins
 call plug#begin()
+Plug 'joshdick/onedark.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'itchyny/vim-gitbranch'
 Plug 'vim-scripts/VimCompletesMe'
 Plug 'cohama/lexima.vim'
 Plug 'easymotion/vim-easymotion'
-Plug 'itchyny/lightline.vim'
-Plug 'itchyny/vim-gitbranch'
-Plug 'joshdick/onedark.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'preservim/nerdtree'
 Plug 'troydm/easybuffer.vim'
 Plug 'voldikss/vim-floaterm'
+Plug 'jremmen/vim-ripgrep'
 call plug#end()
 
 " Plug 'joshdick/onedark.vim'
@@ -149,16 +150,6 @@ let g:lightline = {
       \ },
       \ }
 
-" Plug 'preservim/nerdtree'
-nmap <leader>e :NERDTreeFind<cr>
-" https://github.com/preservim/nerdtree/issues/1321
-" after using <m> bottom panel stays bigger and wont disappear
-" workaround
-let g:NERDTreeMinimalMenu=1
-
-" Plug 'troydm/easybuffer.vim'
-nmap <leader>b :EasyBuffer<cr>
-
 " Plug 'easymotion/vim-easymotion'
 let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_smartcase = 1
@@ -170,12 +161,25 @@ vmap s <Plug>(easymotion-s2)
 " Plug 'junegunn/vim-easy-align'
 vmap <cr> <Plug>(EasyAlign)
 
+" Plug 'preservim/nerdtree'
+nmap <leader>e :NERDTreeFind<cr>
+" https://github.com/preservim/nerdtree/issues/1321
+" after using <m> bottom panel stays bigger and wont disappear
+" workaround
+let g:NERDTreeMinimalMenu=1
+
+" Plug 'troydm/easybuffer.vim'
+nmap <leader>b :EasyBuffer<cr>
+
 " Plug 'voldikss/vim-floaterm'
 let g:floaterm_width = 0.8
 let g:floaterm_height = 0.8
 let g:floaterm_opener = 'edit'
 let g:floaterm_keymap_toggle = '<f7>'
 nmap <leader>o :FloatermNew fzf<cr>
+
+" Plug 'jremmen/vim-ripgrep'
+nmap <leader>f :FloatermNew rg<space>
 
 " autocmd
 """""""""
