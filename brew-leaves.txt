@@ -3,6 +3,7 @@ bat
 fzf
 go
 python
+ripgrep
 stow
 tmux
 tree
