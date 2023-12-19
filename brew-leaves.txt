@@ -6,5 +6,6 @@ go
 python
 ripgrep
 stow
+tldr
 tmux
 tree
