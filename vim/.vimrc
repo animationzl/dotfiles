@@ -39,7 +39,7 @@ set ruler
 set showcmd
 set cursorline
 set noshowmode
-set scrolloff=999 " make cursor line always be in the middle of the window
+set scrolloff=99 " make cursor line always be in the middle of the window
 set splitbelow " focus on the new window when split
 set splitright " focus on the new window when split
 let &fillchars ..= ',eob: ' " disable `~` on nonexistent lines
