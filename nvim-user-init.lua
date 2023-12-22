@@ -12,18 +12,18 @@ return {
     {
       "junegunn/vim-easy-align",
       lazy = false,
-      config = function()
-        vim.keymap.set("v", "<cr>", "<Plug>(EasyAlign)")
-      end,
+      keys = {
+        { "<cr>", "<Plug>(EasyAlign)", mode = { "v" } },
+      },
     },
     {
-      "easymotion/vim-easymotion",
+      "ggandor/leap.nvim",
       lazy = false,
       config = function()
-        vim.g.EasyMotion_do_mapping = 0
-        vim.g.EasyMotion_smartcase = 1
-        vim.keymap.set({"n", "v"}, "f", "<Plug>(easymotion-sl)")
-        vim.keymap.set({"n", "v"}, "s", "<Plug>(easymotion-s2)")
+        vim.keymap.set({"n", "v"}, "s", function ()
+          local current_window = vim.fn.win_getid()
+          require('leap').leap { target_windows = { current_window } }
+        end)
       end,
     },
   },
