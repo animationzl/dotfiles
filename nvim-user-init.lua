@@ -9,20 +9,22 @@ return {
     },
   },
   plugins = {
-    "junegunn/vim-easy-align",
-    lazy = false,
-    config = function()
-      vim.keymap.set("v", "<cr>", "<Plug>(EasyAlign)")
-    end,
-  },
-  plugins = {
-    "easymotion/vim-easymotion",
-    lazy = false,
-    config = function()
-      vim.g.EasyMotion_do_mapping = 0
-      vim.g.EasyMotion_smartcase = 1
-      vim.keymap.set({"n", "v"}, "f", "<Plug>(easymotion-sl)")
-      vim.keymap.set({"n", "v"}, "s", "<Plug>(easymotion-s2)")
-    end,
+    {
+      "junegunn/vim-easy-align",
+      lazy = false,
+      config = function()
+        vim.keymap.set("v", "<cr>", "<Plug>(EasyAlign)")
+      end,
+    },
+    {
+      "easymotion/vim-easymotion",
+      lazy = false,
+      config = function()
+        vim.g.EasyMotion_do_mapping = 0
+        vim.g.EasyMotion_smartcase = 1
+        vim.keymap.set({"n", "v"}, "f", "<Plug>(easymotion-sl)")
+        vim.keymap.set({"n", "v"}, "s", "<Plug>(easymotion-s2)")
+      end,
+    },
   },
 }
