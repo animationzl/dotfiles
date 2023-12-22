@@ -154,9 +154,7 @@ let g:lightline = {
 " Plug 'easymotion/vim-easymotion'
 let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_smartcase = 1
-nmap f <Plug>(easymotion-sl)
 nmap s <Plug>(easymotion-s2)
-vmap f <Plug>(easymotion-sl)
 vmap s <Plug>(easymotion-s2)
 
 " Plug 'junegunn/vim-easy-align'
