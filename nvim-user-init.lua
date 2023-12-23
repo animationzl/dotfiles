@@ -26,5 +26,13 @@ return {
         end)
       end,
     },
+    {
+      "navarasu/onedark.nvim",
+      name = "onedark",
+      opts = {
+        style = 'dark', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
+      },
+    },
   },
+  colorscheme = "onedark",
 }
