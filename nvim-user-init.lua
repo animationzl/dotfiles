@@ -2,7 +2,6 @@ return {
   options = {
     opt = {
       cmdheight = 1, -- number of screen lines to use for the command-line
-      scrolloff = 99, -- make cursor line always be in the middle of the window
       shiftwidth = 4, -- number of space inserted for indentation
       tabstop = 4, -- number of space in a tab
       relativenumber = false, -- do not show relative numberline
