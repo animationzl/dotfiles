@@ -10,8 +10,8 @@ return {
   },
   mappings = {
     n = {
-      ["<s-leftmouse>"] = { function() require("telescope.builtin").lsp_definitions() end },
-      ["<s-rightmouse>"] = { function() require("telescope.builtin").lsp_references() end },
+      ["<s-leftmouse>"] = { [[<leftmouse><cmd>lua require("telescope.builtin").lsp_definitions()<cr>]] },
+      ["<s-rightmouse>"] = { [[<leftmouse><cmd>lua require("telescope.builtin").lsp_references()<cr>]] },
     },
   },
   plugins = {
