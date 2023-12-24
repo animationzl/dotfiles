@@ -8,6 +8,12 @@ return {
       relativenumber = false, -- do not show relative numberline
     },
   },
+  mappings = {
+    n = {
+      ["<s-leftmouse>"] = { function() require("telescope.builtin").lsp_definitions() end },
+      ["<s-rightmouse>"] = { function() require("telescope.builtin").lsp_references() end },
+    },
+  },
   plugins = {
     {
       "junegunn/vim-easy-align",
