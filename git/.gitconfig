@@ -8,5 +8,3 @@
 [core]
 	quotepath = false
 	editor = vim
-[url "https://ghproxy.com/https://github.com"]
-	insteadOf = https://github.com
