@@ -9,3 +9,4 @@ stow
 tldr
 tmux
 tree
+watch
