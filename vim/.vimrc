@@ -176,7 +176,6 @@ nmap <leader>b :EasyBuffer<cr>
 let g:floaterm_width = 0.8
 let g:floaterm_height = 0.8
 let g:floaterm_opener = 'edit'
-let g:floaterm_keymap_toggle = '<f7>'
 nmap <leader>o :FloatermNew fzf<cr>
 
 " Plug 'jremmen/vim-ripgrep'
