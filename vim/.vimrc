@@ -76,7 +76,7 @@ function! <sid>stripTrailingWhitespace()
     let c = col(".")
     " Do the business:
     %s/\s\+$//e
-    " Clean up: restore previous search history, and cursor position
+    " Clean up: restore previous search history, and cursor position.
     let @/=_s
     call cursor(l, c)
 endfunction
