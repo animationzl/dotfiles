@@ -3,7 +3,8 @@ bat
 cliclick
 fzf
 go
-python
+python-setuptools
+python@3.13
 ripgrep
 tldr
 tmux
