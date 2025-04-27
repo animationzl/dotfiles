@@ -64,7 +64,7 @@ nmap <c-k> <c-w>k
 nmap <c-l> <c-w>l
 
 " split window
-nmap \ :split<cr>
+nmap - :split<cr>
 nmap \| :vsplit<cr>
 
 " strip trailing whitespace
