@@ -53,10 +53,6 @@ set vb t_vb= " no beep or flash
 
 let mapleader = " "
 
-" quick save & quit
-nmap <leader>w :w<cr>
-nmap <leader>q :q<cr>
-
 " switch window
 nmap <c-h> <c-w>h
 nmap <c-j> <c-w>j
@@ -66,20 +62,6 @@ nmap <c-l> <c-w>l
 " split window
 nmap - :split<cr>
 nmap \| :vsplit<cr>
-
-" strip trailing whitespace
-nmap <leader>s :call <sid>stripTrailingWhitespace()<cr>
-function! <sid>stripTrailingWhitespace()
-    " Preparation: save last search, and cursor position.
-    let _s=@/
-    let l = line(".")
-    let c = col(".")
-    " Do the business:
-    %s/\s\+$//e
-    " Clean up: restore previous search history, and cursor position.
-    let @/=_s
-    call cursor(l, c)
-endfunction
 
 " plugins
 """""""""
@@ -177,16 +159,13 @@ let g:floaterm_keymap_toggle = '<c-/>' " map to <c-_> if not work: https://githu
 let g:floaterm_width = 0.9
 let g:floaterm_height = 0.9
 let g:floaterm_opener = 'edit'
-nmap <leader>o :FloatermNew fzf<cr>
+nmap <leader><space> :FloatermNew fzf<cr>
 
 " Plug 'jremmen/vim-ripgrep'
-nmap <leader>f :FloatermNew rg<space>
+nmap <leader>/ :FloatermNew rg<space>
 
 " autocmd
 """""""""
-
-" autosave
-autocmd BufLeave * silent! wa
 
 " highlight trailing whitespace
 highlight TrailingWhitespace ctermbg=red guibg=red
