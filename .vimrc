@@ -173,7 +173,7 @@ let g:NERDTreeMinimalMenu=1
 nmap <leader>b :EasyBuffer<cr>
 
 " Plug 'voldikss/vim-floaterm'
-let g:floaterm_keymap_toggle = '<c-/>'
+let g:floaterm_keymap_toggle = '<c-/>' " map to <c-_> if not work: https://github.com/vim/vim/issues/6191
 let g:floaterm_width = 0.9
 let g:floaterm_height = 0.9
 let g:floaterm_opener = 'edit'
