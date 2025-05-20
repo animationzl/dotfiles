@@ -6,5 +6,8 @@ return {
         position = "float",
       },
     },
+    win = {
+      spell = { enabled = false },
+    },
   },
 }
