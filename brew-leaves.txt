@@ -6,6 +6,5 @@ python-setuptools
 python@3.13
 ripgrep
 tldr
-tmux
 tree
 watch
