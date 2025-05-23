@@ -1,6 +1,5 @@
 aria2
 bat
-cliclick
 fzf
 go
 python-setuptools
