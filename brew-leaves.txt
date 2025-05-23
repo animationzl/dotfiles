@@ -2,6 +2,7 @@ aria2
 bat
 fzf
 go
+neovim
 python-setuptools
 python@3.13
 ripgrep
