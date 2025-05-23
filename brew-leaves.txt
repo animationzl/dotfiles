@@ -3,6 +3,7 @@ bat
 fzf
 go
 neovim
+node
 python-setuptools
 python@3.13
 ripgrep
