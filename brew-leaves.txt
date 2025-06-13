@@ -2,6 +2,7 @@ aria2
 bat
 fd
 fzf
+git-delta
 go
 neovim
 node
