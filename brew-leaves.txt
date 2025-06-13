@@ -6,7 +6,7 @@ go
 neovim
 node
 python-setuptools
-python@3.13
+python3
 ripgrep
 tldr
 tree
