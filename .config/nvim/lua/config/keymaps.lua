@@ -20,3 +20,7 @@ vim.api.nvim_create_user_command("DefinitionOrReferences", function()
     end
   end, 100) -- 延迟 100ms
 end, {})
+
+-- Scroll one line at a time
+vim.keymap.set("n", "<scrollwheelup>", "<c-y>", { noremap = true, silent = true })
+vim.keymap.set("n", "<scrollwheeldown>", "<c-e>", { noremap = true, silent = true })
