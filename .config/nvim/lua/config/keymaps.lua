@@ -4,6 +4,7 @@
 
 -- Support mouse navigation
 vim.keymap.set("n", "<m-leftmouse>", "<leftmouse>:DefinitionOrReferences<cr>", { noremap = true, silent = true })
+vim.keymap.set("n", "<m-rightmouse>", "<leftmouse>gI", { remap = true, silent = true })
 vim.api.nvim_create_user_command("DefinitionOrReferences", function()
   -- 保存当前光标位置
   local save_pos = vim.fn.getpos(".")
