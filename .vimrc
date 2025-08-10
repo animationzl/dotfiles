@@ -92,6 +92,15 @@ vmap s <Plug>(easymotion-s2)
 " Plug 'junegunn/vim-easy-align'
 vmap <cr> <Plug>(EasyAlign)
 
+" colorscheme
+"""""""""""""
+
+set termguicolors
+set rtp+=~/code/github.com/folke/tokyonight.nvim/extras/vim
+colorscheme tokyonight
+hi cursorline cterm=NONE gui=NONE
+hi cursorlinenr cterm=NONE gui=NONE
+
 " autocmd
 """""""""
 
@@ -101,12 +110,3 @@ match TrailingWhitespace /\s\+$/
 autocmd BufWinEnter * match TrailingWhitespace /\s\+$/
 autocmd InsertEnter * match TrailingWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match TrailingWhitespace /\s\+$/
-
-" colorscheme
-"""""""""""""
-
-set termguicolors
-set rtp+=~/code/github.com/folke/tokyonight.nvim/extras/vim
-colorscheme tokyonight
-hi cursorline cterm=NONE gui=NONE
-hi cursorlinenr cterm=NONE gui=NONE
