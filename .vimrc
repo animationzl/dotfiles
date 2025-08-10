@@ -48,21 +48,6 @@ let &fillchars ..= ',eob: ' " disable `~` on nonexistent lines
 set clipboard=unnamed " change default register to system clipboard
 set vb t_vb= " no beep or flash
 
-" key maps
-""""""""""
-
-let mapleader = " "
-
-" switch window
-nmap <c-h> <c-w>h
-nmap <c-j> <c-w>j
-nmap <c-k> <c-w>k
-nmap <c-l> <c-w>l
-
-" split window
-nmap - :split<cr>
-nmap \| :vsplit<cr>
-
 " plugins
 """""""""
 
@@ -81,10 +66,6 @@ Plug 'vim-scripts/VimCompletesMe'
 Plug 'cohama/lexima.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/vim-easy-align'
-Plug 'preservim/nerdtree'
-Plug 'troydm/easybuffer.vim'
-Plug 'voldikss/vim-floaterm'
-Plug 'jremmen/vim-ripgrep'
 call plug#end()
 
 " Plug 'itchyny/lightline.vim'
@@ -110,28 +91,6 @@ vmap s <Plug>(easymotion-s2)
 
 " Plug 'junegunn/vim-easy-align'
 vmap <cr> <Plug>(EasyAlign)
-
-" Plug 'preservim/nerdtree'
-" https://github.com/preservim/nerdtree/issues/1321
-" after using <m> bottom panel stays bigger and wont disappear
-" workaround
-let g:NERDTreeMinimalMenu=1
-
-nmap <leader>e :NERDTreeFind<cr>
-
-" Plug 'troydm/easybuffer.vim'
-nmap <leader>b :EasyBuffer<cr>
-
-" Plug 'voldikss/vim-floaterm'
-let g:floaterm_width = 0.9
-let g:floaterm_height = 0.9
-let g:floaterm_opener = 'edit'
-let g:floaterm_keymap_toggle = '<c-/>' " map to <c-_> if not work: https://github.com/vim/vim/issues/6191
-
-nmap <leader><space> :FloatermNew fzf<cr>
-
-" Plug 'jremmen/vim-ripgrep'
-nmap <leader>/ :FloatermNew rg<space>
 
 " autocmd
 """""""""
