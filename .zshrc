@@ -108,7 +108,7 @@ ZLE_REMOVE_SUFFIX_CHARS=''
 
 # envs
 export EDITOR=vim
-export BAT_THEME='OneHalfDark'
+export BAT_THEME='tokyonight_moon'
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --highlight-line \
   --info=inline-right \
